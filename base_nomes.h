@@ -53,7 +53,7 @@ extern const string EXTENSAO[4] ;
 
 extern const string NOME_TRABALHO[3] ;
 
-
+extern const string OBRIGATORIEDADE [3];
 
 
 #endif

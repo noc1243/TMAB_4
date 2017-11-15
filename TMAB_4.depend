@@ -1,17 +1,25 @@
 # depslib dependency file v1.0
-1446671344 source:g:\noc\workspace\tmab_4_git\main.cpp
+1510782427 source:g:\noc\workspace\tmab_4_git\main.cpp
 	<iostream>
+	<cstdlib>
+	<ctime>
+	<vector>
+	"classes.h"
+	"base_nomes.h"
 
-1510772679 source:g:\noc\workspace\tmab_4_git\base_nomes.cpp
+1510779724 source:g:\noc\workspace\tmab_4_git\base_nomes.cpp
 	<string>
 
-1510771186 source:g:\noc\workspace\tmab_4_git\classes.cpp
+1510782642 source:g:\noc\workspace\tmab_4_git\classes.cpp
 	<iostream>
 	<cstdlib>
 	"classes.h"
 
-1510772711 g:\noc\workspace\tmab_4_git\classes.h
+1510781938 g:\noc\workspace\tmab_4_git\classes.h
 	<vector>
 	<string>
 	<ctime>
+
+1510779738 g:\noc\workspace\tmab_4_git\base_nomes.h
+	<string>
 

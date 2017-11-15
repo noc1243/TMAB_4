@@ -58,7 +58,7 @@ const string EXTENSAO[4] = {"Educação", "Cultura", "Saude", "Tecnologia e Prod
 
 const string NOME_TRABALHO[3] = {"Auxilio de Idosos em asilos", "Desenvolvimento de ferramentas para auxilio de recarga de Riocard", "Espanhol basico para criancas"};
 
-
+const string OBRIGATORIEDADE [3] = {"Obrigatoria", "Optativa", "Eletiva"};
 
 
 

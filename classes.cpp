@@ -37,8 +37,13 @@ Disciplina::Disciplina (int cd_Disciplina, string cd_Codigo, int hh_Carga_Horari
                                                 , hh_Carga_Horaria(hh_Carga_Horaria), nm_Ementa(nm_Ementa)
                                                 , nm_Bibliografia(nm_Bibliografia), nm_Disciplina(nm_Disciplina) {}
 
+
+
 Rel_Curso_Disciplina::Rel_Curso_Disciplina (Curso cd_Curso, Disciplina cd_Disciplina, string nm_Obrigatoriedade) :
                                             cd_Curso(cd_Curso), cd_Disciplina(cd_Disciplina), nm_Obrigatoriedade(nm_Obrigatoriedade) {}
+
+Rel_Pre_Requisito::Rel_Pre_Requisito (Disciplina cd_Disciplina, Disciplina cd_Pre_Requisito): cd_Disciplina(cd_Disciplina)
+                                                                                            , cd_Pre_Requisito(cd_Pre_Requisito) {}
 
 Aluno::Aluno (int cd_Aluno, Pessoa cd_Pessoa, Professor cd_Orientador, Curso cd_Curso): cd_Aluno(cd_Aluno), cd_Pessoa(cd_Pessoa)
                                                                                       , cd_Orientador(cd_Orientador), cd_Curso(cd_Curso) {}
