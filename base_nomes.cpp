@@ -54,7 +54,7 @@ const string PROFESSOR_CLASSE[4] = {"Titular", "Associado", "Adjunto", "Assisten
 
 const string PROFESSOR_SITE[4] = {"www.pads.ufrj.br/~", "www.smt.ufrj.br/~", "www.coep.ufrj.br/~", "www.labeca.ufrj.br/~"};
 
-const string EXTENSAO[4] = {"Educação", "Cultura", "Saude", "Tecnologia e Producao"};
+const string EXTENSAO[4] = {"Educacao", "Cultura", "Saude", "Tecnologia e Producao"};
 
 const string NOME_TRABALHO[3] = {"Auxilio de Idosos em asilos", "Desenvolvimento de ferramentas para auxilio de recarga de Riocard", "Espanhol basico para criancas"};
 

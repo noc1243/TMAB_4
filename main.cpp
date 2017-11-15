@@ -5,6 +5,7 @@
 #include <conio.h>
 #include "classes.h"
 #include "base_nomes.h"
+#include "csv_func.h"
 
 #define NUM_AREAS_DE_CONHECIMENTO 10
 #define SIZE_AREAS_DE_CONHECIMENTO 3
@@ -102,17 +103,17 @@ vector <Local> geraLocais ()
 {
     vector <Local> locais;
     vector <int> codigos = geraCodigosAleatorios ();
-    int num_Telefone;
+    int nu_Telefone;
     string nm_Local;
     int cd_Local;
 
     for (int i=0; i<NUM_LOCAL_NOMES; i++)
     {
         cd_Local = getCodigo (codigos);
-        num_Telefone = 7000 + rand () % 2999;
+        nu_Telefone = 70000000 + rand () % 29999999;
         nm_Local = LOCAL_NOMES [rand () % SIZE_LOCAL_NOMES];
 
-        Local local (cd_Local, num_Telefone, nm_Local);
+        Local local (cd_Local, nu_Telefone, nm_Local);
         locais.push_back(local);
     }
 
@@ -295,7 +296,7 @@ vector <Rel_Pre_Requisito> geraPreRequisitos (vector <Disciplina> disciplinas)
         Disciplina cd_Pre_Requisito = getDisciplina (auxDisciplina);
 
         Rel_Pre_Requisito preRequisito (cd_Disciplina, cd_Pre_Requisito);
-        //preRequisitos.push_back (preRequisito);
+        preRequisitos.push_back (preRequisito);
     }
 
     return preRequisitos;
@@ -378,7 +379,7 @@ vector <Rel_Turma_Aluno> geraTurmaAlunos (vector<Turma> turmas, vector<Aluno> al
     {
         Turma cd_Turma = turmas[rand() % turmas.size()];
         Aluno cd_Aluno = alunos[rand() % alunos.size()];
-        nu_Nota = (-1) * rand() % 10;
+        nu_Nota = rand() % 10;
 
         Rel_Turma_Aluno turmaAluno (cd_Turma, cd_Aluno, nu_Nota);
         turmaAlunos.push_back (turmaAluno);
@@ -470,6 +471,9 @@ int main()
     vector <Rel_Pre_Requisito> preRequisito_exatas = geraPreRequisitos (disciplinas_exatas);
     vector <Rel_Pre_Requisito> preRequisito_humanas = geraPreRequisitos (disciplinas_humanas);
     vector <Rel_Pre_Requisito> preRequisito_medicas = geraPreRequisitos (disciplinas_medicas);
+    vector <Rel_Pre_Requisito> preRequisitos = preRequisito_exatas;
+    preRequisitos.insert (preRequisitos.end(), preRequisito_humanas.begin(), preRequisito_humanas.end());
+    preRequisitos.insert (preRequisitos.end(), preRequisito_medicas.begin(), preRequisito_medicas.end());
 
     vector <Disciplina> disciplinas_obrigatorias = disciplinas_obrigatorias_exatas;
     disciplinas_obrigatorias.insert (disciplinas_obrigatorias.end(), disciplinas_obrigatorias_humanas.begin(), disciplinas_obrigatorias_humanas.end());
@@ -487,6 +491,10 @@ int main()
     vector<Rel_Curso_Disciplina> cursoDisciplinaObrigatorias = geraCursoDisciplina (cursos, disciplinas_obrigatorias, 0);
     vector<Rel_Curso_Disciplina> cursoDisciplinaOptativas = geraCursoDisciplina (cursos, disciplinas_optativas, 1);
     vector<Rel_Curso_Disciplina> cursoDisciplinaEletivas = geraCursoDisciplina (cursos, disciplinas_eletivas, 2);
+    vector <Rel_Curso_Disciplina> cursoDisciplinas = cursoDisciplinaObrigatorias;
+    cursoDisciplinas.insert (cursoDisciplinas.end(), cursoDisciplinaOptativas.begin(), cursoDisciplinaOptativas.end());
+    cursoDisciplinas.insert (cursoDisciplinas.end(), cursoDisciplinaEletivas.begin(), cursoDisciplinaEletivas.end());
+
 
     vector <Aluno> alunos = geraAluno (professores,cursos);
 
@@ -502,6 +510,33 @@ int main()
 
     vector<Trabalho> trabalhos = geraTrabalhos (extensoes);
 
+    cout << "Comecou a gravar" << endl;
+
+    csv_Area_de_Conhecimento (areas);
+
+    csv_Local (locais);
+
+    csv_Professor (professores);
+
+    csv_Curso (cursos);
+
+    csv_Disciplina (disciplinas);
+
+    csv_Rel_Pre_Requisito (preRequisitos);
+
+    csv_Rel_Curso_Disciplina (cursoDisciplinas);
+
+    csv_Aluno (alunos);
+
+    csv_Turma (turmas);
+
+    csv_Rel_Turma_Aluno (turmaAlunos);
+
+    csv_Extensao (extensoes);
+
+    csv_Trabalho (trabalhos);
+
+    cout << "Acabou de gravar" << endl;
 
     return 0;
 }

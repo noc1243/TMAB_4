@@ -2,3 +2,16 @@ bin/Debug/TMAB_4.exe
 obj/Debug/main.o
 obj/Debug/base_nomes.o
 obj/Debug/classes.o
+obj/Debug/csv_func.o
+Aluno.csv
+Area_de_Conhecimento.csv
+Curso.csv
+Disciplina.csv
+Extensao.csv
+Local.csv
+Professor.csv
+Rel_Curso_Disciplina.csv
+Rel_Pre_Requisito.csv
+Rel_Turma_Aluno.csv
+Trabalho.csv
+Turma.csv

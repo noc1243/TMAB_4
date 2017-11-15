@@ -1,13 +1,14 @@
 # depslib dependency file v1.0
-1510782427 source:g:\noc\workspace\tmab_4_git\main.cpp
+1510785447 source:g:\noc\workspace\tmab_4_git\main.cpp
 	<iostream>
 	<cstdlib>
 	<ctime>
 	<vector>
+	<conio.h>
 	"classes.h"
 	"base_nomes.h"
 
-1510779724 source:g:\noc\workspace\tmab_4_git\base_nomes.cpp
+1510787544 source:g:\noc\workspace\tmab_4_git\base_nomes.cpp
 	<string>
 
 1510782642 source:g:\noc\workspace\tmab_4_git\classes.cpp
@@ -22,4 +23,14 @@
 
 1510779738 g:\noc\workspace\tmab_4_git\base_nomes.h
 	<string>
+
+1510787614 source:g:\noc\workspace\tmab_4_git\csv_func.cpp
+	<vector>
+	<iostream>
+	<string>
+	<fstream>
+	"csv_func.h"
+
+1510785959 g:\noc\workspace\tmab_4_git\csv_func.h
+	"classes.h"
 
