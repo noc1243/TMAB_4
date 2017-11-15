@@ -39,7 +39,7 @@ const string DISCIPLINAS_ELETIVAS_HUMANAS[3] = {"Historia da Europa", "Desenho A
 
 const string DISCIPLINAS_ELETIVAS_MEDICAS[3] = {"Oftalmologia Basica", "Cardiologia Basica", "Alergologia Basica"};
 
-const string DISCIPLINAS_EMENTA[3] = {"Ementa: Topicos A, B e C", "Ementa: Topicos D, E e F", "Ementa: Topicos G, H e I"};
+const string DISCIPLINAS_EMENTA[3] = {"Ementa: Topicos A B e C", "Ementa: Topicos D, E e F", "Ementa: Topicos G, H e I"};
 
 const string DISCIPLINAS_BIBLIOGRAFIA[3] = {"LIVRO - BASE 1", "LIVRO - BASE 2", "LIVRO - BASE 3"};
 
