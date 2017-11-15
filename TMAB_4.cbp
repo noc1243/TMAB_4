@@ -36,6 +36,8 @@
 		<Unit filename="base_nomes.h" />
 		<Unit filename="classes.cpp" />
 		<Unit filename="classes.h" />
+		<Unit filename="csv_func.cpp" />
+		<Unit filename="csv_func.h" />
 		<Unit filename="main.cpp" />
 		<Extensions>
 			<code_completion />
