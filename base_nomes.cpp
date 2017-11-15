@@ -1,19 +1,19 @@
 ﻿#include "base_nomes.h"
-#include <const string>
+#include <string>
 
 using namespace std;
 
 const string NOMES[20] = {"Ana", "Arnaldo", "Bruno", "Carlos", "Diogo", "Felipe", "Guilherme", "Heraldo", "Julio", "Katia",
 					"Leonardo", "Marcos", "Maria", "Oscar", "Pedro", "Renata", "Sergio", "Thiago", "Victor", "Wesley"};
-					
+
 const string SOBRENOMES[20] = {"da Silva", "Torres", "Gomes Pereira", "Machado", "Carvalho",
 						 "Costa", "Ferreira", "Lima", "Mello", "Miranda",
 						 "Santos", "do Valle", "Monteiro", "Nunes", "Teodosio",
 						 "Barros", "Ribeiro", "Rodrigues", "Teixeira", "Nascimento"};
 
-const string AREA_DE_CONHECIMENTO[3] = {"Exatas", "Humanas", "Medicas"}; 
-						 
-const string CURSOS_EXATAS[3] = {"Engenharia Mecanica", "Engenharia Eletronica", "Matematica"}; 
+const string AREA_DE_CONHECIMENTO[3] = {"Exatas", "Humanas", "Medicas"};
+
+const string CURSOS_EXATAS[3] = {"Engenharia Mecanica", "Engenharia Eletronica", "Matematica"};
 
 const string CURSOS_HUMANAS[3] = {"Direito", "Historia", "Belas Artes"};
 
@@ -44,8 +44,8 @@ const string DISCIPLINAS_EMENTA[3] = {"Ementa: Topicos A, B e C", "Ementa: Topic
 const string DISCIPLINAS_BIBLIOGRAFIA[3] = {"LIVRO - BASE 1", "LIVRO - BASE 2", "LIVRO - BASE 3"};
 
 const string DISCIPLINAS_CODIGOS[20] = {"EEL721", "ABF4598", "AJR8496", "JVL2547", "LAQ5647",
-								  "QPG5621", "LOP4596", "RTC5899", "QJU6588", "POY3214", 
-								  "LOA8596", "RTY6852", "CVB5847", "HEF3264", "JNG6958", 
+								  "QPG5621", "LOP4596", "RTC5899", "QJU6588", "POY3214",
+								  "LOA8596", "RTY6852", "CVB5847", "HEF3264", "JNG6958",
 								  "KIL1234", "ASD4658", "QWE7981", "ZXC1236", "FGH5896"};
 
 const string PROFESSOR_TITULO[5] = {"Graduado", "Pos-Graduado", "Mestrado", "Doutorado", "Pos_Doutorado"};
