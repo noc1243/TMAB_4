@@ -54,7 +54,9 @@ void csv_Pessoa (vector <Pessoa> vecBase)
 	for (int i=0; i < sz_vec; i++)
 	{
 		csvF << vecBase[i].cd_Pessoa << ","
-			 << vecBase[i].nm_Pessoa << endl;
+			 << vecBase[i].nm_Pessoa << ","
+			 << vecBase[i].nm_Sexo << ","
+			 << vecBase[i].nu_Idade << endl;
 	}
 	csvF.close();
 }
@@ -65,11 +67,13 @@ void csv_Professor (vector <Professor> vecBase)
 	string csv_filename = "Professor.csv";
 	ofstream csvF (csv_filename.c_str(), std::ofstream::out);
 
+	string csv_filename_2 = "Pessoa_Professor.csv";
+	ofstream csvF_2 (csv_filename_2.c_str(), std::ofstream::out);
+	
 	for (int i=0; i < sz_vec; i++)
 	{
 		csvF << vecBase[i].cd_Professor << ","
 			 << vecBase[i].cd_Pessoa.cd_Pessoa << ","
-			 << vecBase[i].cd_Pessoa.nm_Pessoa << ","
 			 << vecBase[i].cd_Local.cd_Local << ","
 			 << vecBase[i].nm_Site << ","
 			 << vecBase[i].nm_Email << ","
@@ -78,6 +82,15 @@ void csv_Professor (vector <Professor> vecBase)
 			 << vecBase[i].nm_Classe << endl;
 	}
 	csvF.close();
+	
+	for (int i=0; i < sz_vec; i++)
+	{
+		csvF_2 << vecBase[i].cd_Pessoa.cd_Pessoa << ","
+			 << vecBase[i].cd_Pessoa.nm_Pessoa << ","
+			 << vecBase[i].cd_Pessoa.nm_Sexo << ","
+			 << vecBase[i].cd_Pessoa.nu_Idade << endl;
+	}
+	csvF_2.close();
 }
 
 void csv_Curso (vector <Curso> vecBase)
@@ -109,7 +122,8 @@ void csv_Disciplina (vector <Disciplina> vecBase)
 			 << vecBase[i].hh_Carga_Horaria << ","
 			 << vecBase[i].nm_Ementa << ","
 			 << vecBase[i].nm_Bibliografia << ","
-			 << vecBase[i].nm_Disciplina << endl;
+			 << vecBase[i].nm_Disciplina << ","
+			 << vecBase[i].nu_Creditos << endl;
 	}
 	csvF.close();
 }
@@ -138,7 +152,8 @@ void csv_Rel_Curso_Disciplina (vector <Rel_Curso_Disciplina> vecBase)
 	{
 		csvF << vecBase[i].cd_Curso.cd_Curso << ","
 			 << vecBase[i].cd_Disciplina.cd_Disciplina << ","
-			 << vecBase[i].nm_Obrigatoriedade << endl;
+			 << vecBase[i].nm_Obrigatoriedade << ","
+			 << vecBase[i].nu_Periodo << endl;
 	}
 	csvF.close();
 }
@@ -149,15 +164,26 @@ void csv_Aluno (vector <Aluno> vecBase)
 	string csv_filename = "Aluno.csv";
 	ofstream csvF (csv_filename.c_str(), std::ofstream::out);
 
+	string csv_filename_2 = "Pessoa_Aluno.csv";
+	ofstream csvF_2 (csv_filename_2.c_str(), std::ofstream::out);
+	
 	for (int i=0; i < sz_vec; i++)
 	{
 		csvF << vecBase[i].cd_Aluno << ","
 			 << vecBase[i].cd_Pessoa.cd_Pessoa << ","
-			 << vecBase[i].cd_Pessoa.nm_Pessoa << ","
 			 << vecBase[i].cd_Orientador.cd_Professor << ","
 			 << vecBase[i].cd_Curso.cd_Curso << endl;
 	}
 	csvF.close();
+	
+	for (int i=0; i < sz_vec; i++)
+	{
+		csvF_2 << vecBase[i].cd_Pessoa.cd_Pessoa << ","
+			 << vecBase[i].cd_Pessoa.nm_Pessoa << ","
+			 << vecBase[i].cd_Pessoa.nm_Sexo << ","
+			 << vecBase[i].cd_Pessoa.nu_Idade << endl;
+	}
+	csvF_2.close();
 }
 
 void csv_Turma (vector <Turma> vecBase)
@@ -174,7 +200,9 @@ void csv_Turma (vector <Turma> vecBase)
 			 << vecBase[i].cd_Professor.cd_Professor << ","
 			 << vecBase[i].hh_Horario << ","
 			 << vecBase[i].nu_Vagas << ","
-			 << vecBase[i].nu_Turma << endl;
+			 << vecBase[i].nu_Turma << ","
+			 << vecBase[i].nu_Ano << ","
+			 << vecBase[i].nu_Semestre << endl;
 	}
 	csvF.close();
 }

@@ -34,3 +34,39 @@
 1510785959 g:\noc\workspace\tmab_4_git\csv_func.h
 	"classes.h"
 
+1511047294 source:c:\users\bruno\documents\code_blocks\tmab_4-master\base_nomes.cpp
+	<string>
+
+1511046304 source:c:\users\bruno\documents\code_blocks\tmab_4-master\classes.cpp
+	<iostream>
+	<cstdlib>
+	"classes.h"
+
+1511046122 c:\users\bruno\documents\code_blocks\tmab_4-master\classes.h
+	<vector>
+	<string>
+	<ctime>
+
+1511047205 source:c:\users\bruno\documents\code_blocks\tmab_4-master\main.cpp
+	<iostream>
+	<cstdlib>
+	<ctime>
+	<vector>
+	<conio.h>
+	"classes.h"
+	"base_nomes.h"
+	"csv_func.h"
+
+1510768826 c:\users\bruno\documents\code_blocks\tmab_4-master\base_nomes.h
+	<string>
+
+1510768826 c:\users\bruno\documents\code_blocks\tmab_4-master\csv_func.h
+	"classes.h"
+
+1511047088 source:c:\users\bruno\documents\code_blocks\tmab_4-master\csv_func.cpp
+	<vector>
+	<iostream>
+	<string>
+	<fstream>
+	"csv_func.h"
+

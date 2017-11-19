@@ -60,7 +60,9 @@ class Pessoa
     public:
         int cd_Pessoa;
         string nm_Pessoa;
-        Pessoa (int, string);
+		string nm_Sexo;
+		int nu_Idade;
+        Pessoa (int, string, string, int);
 };
 
 class Professor // Classes: Pessoa; Local;
@@ -97,7 +99,8 @@ class Disciplina
         string nm_Ementa;
         string nm_Bibliografia;
         string nm_Disciplina;
-        Disciplina (int, string, int, string, string, string);
+		int nu_Creditos;
+        Disciplina (int, string, int, string, string, string, int);
 };
 
 class Rel_Pre_Requisito // Classes: Disciplina;
@@ -114,7 +117,8 @@ class Rel_Curso_Disciplina // Classes: Curso; Disciplina;
         Curso cd_Curso;
         Disciplina cd_Disciplina;
         string nm_Obrigatoriedade;
-        Rel_Curso_Disciplina (Curso,Disciplina, string);
+		int nu_Periodo;
+        Rel_Curso_Disciplina (Curso,Disciplina, string, int);
 };
 
 class Aluno // Classes: Pessoa; Professor; Curso;
@@ -138,7 +142,9 @@ class Turma // Classes: Disciplina; Local; Professor;
         int hh_Horario;
         int nu_Vagas;
         int nu_Turma;
-        Turma (int, Disciplina, Local, Professor, int, int, int);
+		int nu_Ano;
+		int nu_Semestre;
+        Turma (int, Disciplina, Local, Professor, int, int, int, int, int);
 };
 
 class Rel_Turma_Aluno // Classes: Turma; Aluno;

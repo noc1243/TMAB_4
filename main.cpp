@@ -135,13 +135,21 @@ vector <Pessoa> geraPessoas (int numPessoas)
     vector <int> codigos = geraCodigosAleatorios ();
     string nm_Pessoa;
     int cd_Pessoa;
+	int nu_Idade;
+	string nm_Sexo;
 
     for (int i=0; i<numPessoas; i++)
     {
         cd_Pessoa = getCodigo (codigos);
         nm_Pessoa = NOMES [rand() % SIZE_NOMES] + " " + SOBRENOMES [rand() % SIZE_SOBRENOMES];
 
-        Pessoa pessoa (cd_Pessoa, nm_Pessoa);
+		nu_Idade = rand() % 30 + 15;
+		if (rand() % 2)
+			nm_Sexo = "M";
+		else
+			nm_Sexo = "F";
+		
+        Pessoa pessoa (cd_Pessoa, nm_Pessoa, nm_Sexo, nu_Idade);
         pessoas.push_back (pessoa);
     }
 
@@ -258,6 +266,7 @@ vector <Disciplina> geraDisciplina (int tipoCurso, int tipoDisciplina) //tipoCur
     string nm_Bibliografia;
     string nm_Disciplina;
     int cd_Disciplina;
+	int nu_Creditos;
 
     for (int i=0; i<NUM_DISCIPLINAS; i++)
     {
@@ -267,8 +276,10 @@ vector <Disciplina> geraDisciplina (int tipoCurso, int tipoDisciplina) //tipoCur
         nm_Ementa = DISCIPLINAS_EMENTA [rand () % SIZE_DISCIPLINAS_EMENTA];
         nm_Bibliografia = DISCIPLINAS_BIBLIOGRAFIA [rand() % SIZE_DISCIPLINAS_BIBLIOGRAFIA];
         nm_Disciplina = getNomeDisciplina (tipoCurso, tipoDisciplina);
+		
+		nu_Creditos = rand() % 5 + 1;
 
-        Disciplina disciplina (cd_Disciplina, cd_Codigo, hh_Carga_Horaria, nm_Ementa, nm_Bibliografia, nm_Disciplina);
+        Disciplina disciplina (cd_Disciplina, cd_Codigo, hh_Carga_Horaria, nm_Ementa, nm_Bibliografia, nm_Disciplina, nu_Creditos);
         disciplinas.push_back (disciplina);
     }
 
@@ -306,6 +317,7 @@ vector <Rel_Curso_Disciplina> geraCursoDisciplina (vector <Curso> cursos, vector
 {
     vector <Rel_Curso_Disciplina> cursoDisciplinas;
     string nm_Obrigatoriedade;
+	int nu_Periodo;
 
     for (int i=0; i<NUM_REL_CURSO_DISCIPLINA; i++)
     {
@@ -313,8 +325,10 @@ vector <Rel_Curso_Disciplina> geraCursoDisciplina (vector <Curso> cursos, vector
         Disciplina cd_Disciplina = disciplinas [rand() % disciplinas.size()];
 
         nm_Obrigatoriedade = OBRIGATORIEDADE [tipoDisciplina];
+		
+		nu_Periodo = rand() % 10 + 1;
 
-        Rel_Curso_Disciplina cursoDisciplina (cd_Curso, cd_Disciplina, nm_Obrigatoriedade);
+        Rel_Curso_Disciplina cursoDisciplina (cd_Curso, cd_Disciplina, nm_Obrigatoriedade, nu_Periodo);
         cursoDisciplinas.push_back(cursoDisciplina);
     }
 
@@ -352,6 +366,8 @@ vector <Turma> geraTurmas (vector<Disciplina> disciplinas, vector<Local> locais,
     int nu_Vagas;
     int nu_Turma;
     int cd_Turma;
+	int nu_Ano;
+	int nu_Semestre;
 
     for (int i=0; i<NUM_TURMAS; i++)
     {
@@ -362,8 +378,11 @@ vector <Turma> geraTurmas (vector<Disciplina> disciplinas, vector<Local> locais,
         hh_Horario = 1 + rand() % 6;
         nu_Vagas = 10 + rand() % 40;
         nu_Turma = rand () % 3;
+		
+		nu_Ano = rand() % 18 + 2000;
+		nu_Semestre = rand() % 2 + 1;
 
-        Turma turma  (cd_Turma, cd_Disciplina, cd_Local, cd_Professor, hh_Horario, nu_Vagas, nu_Turma);
+        Turma turma  (cd_Turma, cd_Disciplina, cd_Local, cd_Professor, hh_Horario, nu_Vagas, nu_Turma, nu_Ano, nu_Semestre);
         turmas.push_back (turma);
     }
 
